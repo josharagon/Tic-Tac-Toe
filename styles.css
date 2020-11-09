@@ -1,0 +1,69 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  height: 100%;
+}
+
+body {
+  display: flex;
+  font-family: sans-serif;
+  justify-content: center;
+  height: 100%;
+}
+
+.container{
+  margin: 20px;
+  padding: 20px;
+}
+
+
+.title{
+  text-align: center;
+  color: purple;
+}
+
+
+.game-grid{
+  background: linear-gradient(0deg, rgba(198,160,120,1) 22%, rgba(33,89,147,1) 52%, rgba(65,19,113,1) 74%);
+  display: grid;
+  grid-template-columns:repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin-top: 50px;
+}
+
+.game-cell{
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  background-color: white;
+  cursor: pointer;
+}
+
+
+.x::after {
+  content: '♣️';
+  font-size: 180px;
+cursor: default;
+}
+
+.o::after {
+  content: '♥️';
+  font-size: 180px;
+  cursor: default;
+}
+
+
+.o-wins,
+.x-wins{
+  background: linear-gradient(0deg, rgba(198,160,120,1) 22%, rgba(33,89,147,1) 52%, rgba(65,19,113,1) 74%);
+  width: -webkit-fill-available;
+  text-align: center;
+  color: white;
+}
